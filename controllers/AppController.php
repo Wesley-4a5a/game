@@ -11,6 +11,11 @@ class AppController{
     require_once(APP_PATH . '/views/themes/footer.php');
   }
 
+  function internalRedirect($controller, $action)
+	{
+		header('Location: ' . APP_BASE_URL . '/' . $controller . '/' . $action);
+		die;
+	}
 
 }
 

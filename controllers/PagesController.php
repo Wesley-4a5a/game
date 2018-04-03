@@ -15,6 +15,10 @@ class PagesController extends AppController{
     $this->loadCompleteView('/pages/about');
   }
 
+  public function error(){
+    $this->loadCompleteView('/pages/error');
+  }
+
 }
 
  ?>

@@ -32,13 +32,22 @@ $controllerFile = 'controllers/' . $className . '.php';
 if(file_exists($controllerFile)){
   require_once($controllerFile);
 }
+else{
+  require_once('controllers/PagesController.php');
+}
 
 if(class_exists($className)){
   $controllerObject = new $className();
 }
+else{
+  $controllerObject = new PagesController();
+}
 
 if(method_exists($controllerObject, $action)){
   $controllerObject->{$action}($parameter);
+}
+else{
+  $controllerObject->{'error'}();
 }
 
 
