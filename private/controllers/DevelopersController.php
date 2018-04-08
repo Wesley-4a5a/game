@@ -19,7 +19,7 @@ class DevelopersController extends AppController{
   }
 
   public function addForm(){
-    $this->loadCompleteView('/developers/addForm');
+    $this->loadCompleteView('/developers/updateForm');
   }
 
   public function add(){

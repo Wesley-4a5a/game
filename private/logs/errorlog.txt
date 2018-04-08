@@ -130,3 +130,9 @@ Stack trace:
 #1 C:\xampp\htdocs\GameExamen\controllers\DevelopersController.php(28): DevelopersModel->addDeveloper(NULL)
 #2 C:\xampp\htdocs\GameExamen\index.php(54): DevelopersController->add('overview')
 #3 {main}
+[08/04/2018 - 09:04pm][dunn0_0@hotmail.com]PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'developer' cannot be null in C:\xampp\htdocs\GameExamen\private\models\DevelopersModel.php:33
+Stack trace:
+#0 C:\xampp\htdocs\GameExamen\private\models\DevelopersModel.php(33): PDOStatement->execute()
+#1 C:\xampp\htdocs\GameExamen\private\controllers\DevelopersController.php(28): DevelopersModel->addDeveloper(NULL)
+#2 C:\xampp\htdocs\GameExamen\index.php(55): DevelopersController->add('overview')
+#3 {main}
