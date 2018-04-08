@@ -20,12 +20,15 @@
               <th>
                 Genre
               </th>
-              <th>
-                Update
-              </th>
-              <th>
-                Delete
-              </th>
+              <?php if($_SESSION['role'] === 'admin'){ ?>
+                <th>
+                  Update
+                </th>
+                <th>
+                  Delete
+                </th>
+            <?php  }?>
+
             </tr>
 
 <?php foreach($game as $row){  ?>
@@ -45,13 +48,16 @@
         <td>
           <?= $row->ALLEKUTGENRESBIJELKAAR ?>
         </td>
+        <?php if($_SESSION['role'] === 'admin'){ ?>
         <td>
           <a href='<?= APP_BASE_URL ?>/Games/updateForm/<?= $row->game_ID ?>'>Update Deze</a>
         </td>
         <td>
           <a href='<?= APP_BASE_URL ?>/Games/delete/<?= $row->game_ID ?>'>Hang Deze</a>
         </td>
-        <?php } ?>
+
+          <?php  }
+         } ?>
       </tr>
 
 

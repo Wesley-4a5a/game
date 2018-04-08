@@ -1,8 +1,16 @@
 <?php
 
+session_start();
+if(!ISSET($_SESSION['login'])){
+	$_SESSION['login'] = false;
+	$_SESSION['email'] = null;
+	$_SESSION['role'] = null;
+ }
+
+
 define('APP_PATH', __DIR__);
 define('APP_BASE_URL', 'http://localhost/GameExamen');
-
+require_once(APP_PATH . '/private/classes/utility.php');
 
 $requestString = str_replace($_SERVER['SCRIPT_NAME'], "", $_SERVER['PHP_SELF']);
 $requestVars = explode("/", $requestString);
@@ -27,13 +35,13 @@ if($controller === NULL && $action === NULL){
 }
 
 $className = ucfirst($controller) . 'Controller';
-$controllerFile = 'controllers/' . $className . '.php';
+$controllerFile = 'private/controllers/' . $className . '.php';
 
 if(file_exists($controllerFile)){
   require_once($controllerFile);
 }
 else{
-  require_once('controllers/PagesController.php');
+  require_once('private/controllers/PagesController.php');
 }
 
 if(class_exists($className)){

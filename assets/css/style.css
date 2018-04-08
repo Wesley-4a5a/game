@@ -1,3 +1,7 @@
+body{
+  background-color: #99c0ff;
+}
+
 
 * {
     box-sizing: border-box;
@@ -19,7 +23,7 @@
 [class*="col-"] {
     float: left;
     padding: 15px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .row::after {
@@ -28,6 +32,26 @@
     display: table;
 }
 
+.header{
+  border-bottom: black 1px solid;
+}
+
+.menu{
+  border-right: black 1px solid;
+}
+
+.footer{
+  border-top: black 1px solid;
+}
+
 .hond{
   background-color:blue;
+}
+
+.logo {
+    float: left;
+}
+
+.login{
+  float: right;
 }

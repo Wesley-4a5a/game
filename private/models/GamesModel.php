@@ -6,7 +6,7 @@ require_once('AppModel.php');
 class GamesModel extends AppModel{
 
   public function __construct(){
-
+    $this->logFile = new UtilityClass();
   }
 
   public function getAll(){
@@ -14,7 +14,7 @@ class GamesModel extends AppModel{
     $stmt = $conn->prepare("SELECT *, GROUP_CONCAT(genre.genre) AS ALLEKUTGENRESBIJELKAAR FROM game_genre
       INNER JOIN genre on genre.genre_ID = game_genre.genre_ID
       RIGHT JOIN game on game.game_ID = game_genre.game_ID
-      INNER JOIN developer on game.developer_ID = developer.developer_ID GROUP BY game
+      LEFT JOIN developer on game.developer_ID = developer.developer_ID GROUP BY game
       ");
     $stmt->execute();
     $arr = $stmt->fetchAll(PDO::FETCH_OBJ);
@@ -24,6 +24,15 @@ class GamesModel extends AppModel{
   public function getOne($id){
     $conn = $this->getDBConnection();
     $stmt = $conn->prepare("SELECT * FROM game WHERE game_id = :id");
+    $stmt->bindParam(':id', $id);
+    $stmt->execute();
+    $arr = $stmt->fetchAll(PDO::FETCH_OBJ);
+    return $arr;
+  }
+
+  public function getGameGenre($id){
+    $conn = $this->getDBConnection();
+    $stmt = $conn->prepare("SELECT * FROM game_genre WHERE game_id = :id");
     $stmt->bindParam(':id', $id);
     $stmt->execute();
     $arr = $stmt->fetchAll(PDO::FETCH_OBJ);
@@ -50,12 +59,28 @@ class GamesModel extends AppModel{
     $stmt = $conn->prepare("INSERT INTO game_genre(game_id, genre_id) VALUES(LAST_INSERT_ID(), :genre_id)");
 		$stmt->bindParam(':genre_id', $genre_id);
     $stmt->execute();
+    return;
   }
 
   public function deleteGame($id){
     $conn = $this->getDBConnection();
     $stmt = $conn->prepare("DELETE FROM game WHERE game_id = :id");
 		$stmt->bindParam(':id', $id);
+    $stmt->execute();
+    return;
+  }
+
+  public function updateGame($id, $game, $description, $price, $genre_id, $developer_id, $old_genre_id){
+    $conn = $this->getDBConnection();
+    $stmt = $conn->prepare("UPDATE game SET game = :game, price = :price, description = :description, developer_id = :developer_id WHERE game_id = $id");
+    $stmt->bindParam(':game', $game);
+		$stmt->bindParam(':description', $description);
+		$stmt->bindParam(':price', $price);
+		$stmt->bindParam(':developer_id', $developer_id);
+    $stmt->execute();
+    $stmt = $conn->prepare("UPDATE game_genre SET genre_ID = :genre_id WHERE game_id = $id AND genre_id = :old_genre_id");
+    $stmt->bindParam(':genre_id', $genre_id);
+    $stmt->bindParam(':old_genre_id', $old_genre_id);
     $stmt->execute();
     return;
   }

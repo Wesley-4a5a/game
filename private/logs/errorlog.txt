@@ -1,0 +1,132 @@
+[08/04/2018 - 03:53pm]PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'game' cannot be null in C:\xampp\htdocs\GameExamen\models\GamesModel.php:58
+Stack trace:
+#0 C:\xampp\htdocs\GameExamen\models\GamesModel.php(58): PDOStatement->execute()
+#1 C:\xampp\htdocs\GameExamen\controllers\GamesController.php(33): GamesModel->addGame(NULL, NULL, NULL, NULL, NULL)
+#2 C:\xampp\htdocs\GameExamen\index.php(54): GamesController->add('overview')
+#3 {main}
+[08/04/2018 - 03:53pm]PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'game' cannot be null in C:\xampp\htdocs\GameExamen\models\GamesModel.php:58
+Stack trace:
+#0 C:\xampp\htdocs\GameExamen\models\GamesModel.php(58): PDOStatement->execute()
+#1 C:\xampp\htdocs\GameExamen\controllers\GamesController.php(33): GamesModel->addGame(NULL, NULL, NULL, NULL, NULL)
+#2 C:\xampp\htdocs\GameExamen\index.php(54): GamesController->add('overview')
+#3 {main}
+[08/04/2018 - 05:01pm]SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'game' cannot be null
+[08/04/2018 - 05:38pm]flikker
+[08/04/2018 - 05:38pm]PDOException: PDO::__construct(): php_network_getaddresses: getaddrinfo failed: No such host is known.  in C:\xampp\htdocs\GameExamen\models\AppModel.php:23
+Stack trace:
+#0 C:\xampp\htdocs\GameExamen\models\AppModel.php(23): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 C:\xampp\htdocs\GameExamen\models\GenresModel.php(13): AppModel->getDBConnection()
+#2 C:\xampp\htdocs\GameExamen\controllers\GenresController.php(16): GenresModel->getAll()
+#3 C:\xampp\htdocs\GameExamen\index.php(54): GenresController->overview(NULL)
+#4 {main}
+
+Next PDOException: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: No such host is known.  in C:\xampp\htdocs\GameExamen\models\AppModel.php:23
+Stack trace:
+#0 C:\xampp\htdocs\GameExamen\models\AppModel.php(23): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 C:\xampp\htdocs\GameExamen\models\GenresModel.php(13): AppModel->getDBConnection()
+#2 C:\xampp\htdocs\GameExamen\controllers\GenresController.php(16): GenresModel->getAll()
+#3 C:\xampp\htdocs\GameExamen\index.php(54): GenresController->overview(NULL)
+#4 {main}
+[08/04/2018 - 05:39pm]PDOException: PDO::__construct(): php_network_getaddresses: getaddrinfo failed: No such host is known.  in C:\xampp\htdocs\GameExamen\models\AppModel.php:23
+Stack trace:
+#0 C:\xampp\htdocs\GameExamen\models\AppModel.php(23): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 C:\xampp\htdocs\GameExamen\models\GenresModel.php(13): AppModel->getDBConnection()
+#2 C:\xampp\htdocs\GameExamen\controllers\GenresController.php(16): GenresModel->getAll()
+#3 C:\xampp\htdocs\GameExamen\index.php(54): GenresController->overview(NULL)
+#4 {main}
+
+Next PDOException: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: No such host is known.  in C:\xampp\htdocs\GameExamen\models\AppModel.php:23
+Stack trace:
+#0 C:\xampp\htdocs\GameExamen\models\AppModel.php(23): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 C:\xampp\htdocs\GameExamen\models\GenresModel.php(13): AppModel->getDBConnection()
+#2 C:\xampp\htdocs\GameExamen\controllers\GenresController.php(16): GenresModel->getAll()
+#3 C:\xampp\htdocs\GameExamen\index.php(54): GenresController->overview(NULL)
+#4 {main}
+[08/04/2018 - 07:21pm]PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'game' cannot be null in C:\xampp\htdocs\GameExamen\models\GamesModel.php:58
+Stack trace:
+#0 C:\xampp\htdocs\GameExamen\models\GamesModel.php(58): PDOStatement->execute()
+#1 C:\xampp\htdocs\GameExamen\controllers\GamesController.php(35): GamesModel->addGame(NULL, NULL, NULL, NULL, NULL)
+#2 C:\xampp\htdocs\GameExamen\index.php(54): GamesController->add('overview')
+#3 {main}
+[08/04/2018 - 07:21pm]PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'game' cannot be null in C:\xampp\htdocs\GameExamen\models\GamesModel.php:58
+Stack trace:
+#0 C:\xampp\htdocs\GameExamen\models\GamesModel.php(58): PDOStatement->execute()
+#1 C:\xampp\htdocs\GameExamen\controllers\GamesController.php(35): GamesModel->addGame(NULL, NULL, NULL, NULL, NULL)
+#2 C:\xampp\htdocs\GameExamen\index.php(54): GamesController->add('overview')
+#3 {main}
+[08/04/2018 - 07:24pm]PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'game' cannot be null in C:\xampp\htdocs\GameExamen\models\GamesModel.php:58
+Stack trace:
+#0 C:\xampp\htdocs\GameExamen\models\GamesModel.php(58): PDOStatement->execute()
+#1 C:\xampp\htdocs\GameExamen\controllers\GamesController.php(34): GamesModel->addGame(NULL, NULL, NULL, NULL, NULL)
+#2 C:\xampp\htdocs\GameExamen\index.php(54): GamesController->add('overview')
+#3 {main}
+[08/04/2018 - 07:24pm]PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'game' cannot be null in C:\xampp\htdocs\GameExamen\models\GamesModel.php:58
+Stack trace:
+#0 C:\xampp\htdocs\GameExamen\models\GamesModel.php(58): PDOStatement->execute()
+#1 C:\xampp\htdocs\GameExamen\controllers\GamesController.php(34): GamesModel->addGame(NULL, NULL, NULL, NULL, NULL)
+#2 C:\xampp\htdocs\GameExamen\index.php(54): GamesController->add('overview')
+#3 {main}
+[08/04/2018 - 07:27pm]PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'game' cannot be null in C:\xampp\htdocs\GameExamen\models\GamesModel.php:58
+Stack trace:
+#0 C:\xampp\htdocs\GameExamen\models\GamesModel.php(58): PDOStatement->execute()
+#1 C:\xampp\htdocs\GameExamen\controllers\GamesController.php(34): GamesModel->addGame(NULL, NULL, NULL, NULL, NULL)
+#2 C:\xampp\htdocs\GameExamen\index.php(54): GamesController->add('overview')
+#3 {main}
+[08/04/2018 - 07:27pm]PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'game' cannot be null in C:\xampp\htdocs\GameExamen\models\GamesModel.php:58
+Stack trace:
+#0 C:\xampp\htdocs\GameExamen\models\GamesModel.php(58): PDOStatement->execute()
+#1 C:\xampp\htdocs\GameExamen\controllers\GamesController.php(34): GamesModel->addGame(NULL, NULL, NULL, NULL, NULL)
+#2 C:\xampp\htdocs\GameExamen\index.php(54): GamesController->add('overview')
+#3 {main}
+[08/04/2018 - 07:27pm]PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'game' cannot be null in C:\xampp\htdocs\GameExamen\models\GamesModel.php:58
+Stack trace:
+#0 C:\xampp\htdocs\GameExamen\models\GamesModel.php(58): PDOStatement->execute()
+#1 C:\xampp\htdocs\GameExamen\controllers\GamesController.php(34): GamesModel->addGame(NULL, NULL, NULL, NULL, NULL)
+#2 C:\xampp\htdocs\GameExamen\index.php(54): GamesController->add('overview')
+#3 {main}
+[08/04/2018 - 07:33pm]$e
+[08/04/2018 - 07:33pm]$e
+[08/04/2018 - 07:34pm]PDOException: SQLSTATE[HY000] [1049] Unknown database 'gaes' in C:\xampp\htdocs\GameExamen\models\AppModel.php:25
+Stack trace:
+#0 C:\xampp\htdocs\GameExamen\models\AppModel.php(25): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 C:\xampp\htdocs\GameExamen\models\GamesModel.php(13): AppModel->getDBConnection()
+#2 C:\xampp\htdocs\GameExamen\controllers\GamesController.php(17): GamesModel->getAll()
+#3 C:\xampp\htdocs\GameExamen\index.php(54): GamesController->overview('overview')
+#4 {main}
+[08/04/2018 - 07:34pm]PDOException: SQLSTATE[HY000] [1049] Unknown database 'gaes' in C:\xampp\htdocs\GameExamen\models\AppModel.php:25
+Stack trace:
+#0 C:\xampp\htdocs\GameExamen\models\AppModel.php(25): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 C:\xampp\htdocs\GameExamen\models\GamesModel.php(13): AppModel->getDBConnection()
+#2 C:\xampp\htdocs\GameExamen\controllers\GamesController.php(17): GamesModel->getAll()
+#3 C:\xampp\htdocs\GameExamen\index.php(54): GamesController->overview('overview')
+#4 {main}
+[08/04/2018 - 07:38pm]PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'developer' cannot be null in C:\xampp\htdocs\GameExamen\models\DevelopersModel.php:33
+Stack trace:
+#0 C:\xampp\htdocs\GameExamen\models\DevelopersModel.php(33): PDOStatement->execute()
+#1 C:\xampp\htdocs\GameExamen\controllers\DevelopersController.php(28): DevelopersModel->addDeveloper(NULL)
+#2 C:\xampp\htdocs\GameExamen\index.php(54): DevelopersController->add('overview')
+#3 {main}
+[08/04/2018 - 07:38pm]PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'developer' cannot be null in C:\xampp\htdocs\GameExamen\models\DevelopersModel.php:33
+Stack trace:
+#0 C:\xampp\htdocs\GameExamen\models\DevelopersModel.php(33): PDOStatement->execute()
+#1 C:\xampp\htdocs\GameExamen\controllers\DevelopersController.php(28): DevelopersModel->addDeveloper(NULL)
+#2 C:\xampp\htdocs\GameExamen\index.php(54): DevelopersController->add('overview')
+#3 {main}
+[08/04/2018 - 07:43pm]PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'developer' cannot be null in C:\xampp\htdocs\GameExamen\models\DevelopersModel.php:33
+Stack trace:
+#0 C:\xampp\htdocs\GameExamen\models\DevelopersModel.php(33): PDOStatement->execute()
+#1 C:\xampp\htdocs\GameExamen\controllers\DevelopersController.php(28): DevelopersModel->addDeveloper(NULL)
+#2 C:\xampp\htdocs\GameExamen\index.php(54): DevelopersController->add('overview')
+#3 {main}
+[08/04/2018 - 07:43pm]PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'developer' cannot be null in C:\xampp\htdocs\GameExamen\models\DevelopersModel.php:33
+Stack trace:
+#0 C:\xampp\htdocs\GameExamen\models\DevelopersModel.php(33): PDOStatement->execute()
+#1 C:\xampp\htdocs\GameExamen\controllers\DevelopersController.php(28): DevelopersModel->addDeveloper(NULL)
+#2 C:\xampp\htdocs\GameExamen\index.php(54): DevelopersController->add('overview')
+#3 {main}
+[08/04/2018 - 07:44pm][dunn0_0@hotmail.com]PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'developer' cannot be null in C:\xampp\htdocs\GameExamen\models\DevelopersModel.php:33
+Stack trace:
+#0 C:\xampp\htdocs\GameExamen\models\DevelopersModel.php(33): PDOStatement->execute()
+#1 C:\xampp\htdocs\GameExamen\controllers\DevelopersController.php(28): DevelopersModel->addDeveloper(NULL)
+#2 C:\xampp\htdocs\GameExamen\index.php(54): DevelopersController->add('overview')
+#3 {main}

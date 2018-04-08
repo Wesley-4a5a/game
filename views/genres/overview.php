@@ -2,7 +2,7 @@
 <div class='col-10'>
 <h1>Genres</h1>
 <hr />
-<a href='<?= APP_BASE_URL ?>/Genre/addForm'>Add die nieuwe genre</a>
+<a href='<?= APP_BASE_URL ?>/Genres/addForm'>Add die nieuwe genre</a>
     <table border=1>
             <tr>
               <th>
@@ -22,10 +22,10 @@
           <?= $row->genre ?>
         </td>
         <td>
-          <a href='<?= APP_BASE_URL ?>/Games/updateForm/<?= $row->game_ID ?>'>Update Deze</a>
+          <a href='<?= APP_BASE_URL ?>/Genres/updateForm/<?= $row->genre_ID ?>'>Update Deze</a>
         </td>
         <td>
-          <a href='<?= APP_BASE_URL ?>/Games/delete/<?= $row->game_ID ?>'>Hang Deze</a>
+          <a href='<?= APP_BASE_URL ?>/Genres/delete/<?= $row->genre_ID ?>'>Hang Deze</a>
         </td>
         <?php } ?>
       </tr>

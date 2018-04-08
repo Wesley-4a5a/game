@@ -28,7 +28,15 @@ CREATE TABLE game (
 CREATE TABLE game_genre (
   game_ID int(11) UNSIGNED NOT NULL,
   genre_ID int(11) UNSIGNED NOT NULL,
-  CONSTRAINT game_genre_ID PRIMARY KEY (game_ID,genre_ID)
+  CONSTRAINT DEZE_ID PRIMARY KEY (game_ID,genre_ID)
+);
+
+CREATE TABLE account (
+  account_ID int(11) UNSIGNED NOT NULL AUTO_INCREMENT UNIQUE,
+  email varchar(255) NOT NULL UNIQUE,
+  pass varchar(255) NOT NULL,
+  role SET('admin', 'editor', 'medewerker') NOT NULL,
+  PRIMARY KEY (account_ID)
 );
 
 INSERT INTO game(game,price,description,developer_ID) VALUES
@@ -37,14 +45,16 @@ INSERT INTO game(game,price,description,developer_ID) VALUES
 ('World Wide Soccer Sega International Victory Goal Edition Japan', 19.99, 'Woohoo', 3),
 ('AOF', 2.99, 'Pretty good graphics', 4),
 ('Senran Kagura Estival Versus', 29.99, 'Crazy fun time', 5),
-('Tree of Savior', 'FREE', 'Buressin', 6);
+('Tree of Savior', 'FREE', 'Buressin', 6),
+('GOOIWEG', '9.99', 'GOOIWEG', 7);
 
 INSERT INTO genre(genre) VALUES
 ('MMORPG'),
 ('RPG'),
 ('Ecchi'),
 ('SRPG'),
-('Soccer');
+('Soccer'),
+('GOOIWEGGENRE');
 
 INSERT INTO developer(developer) VALUES
 ('Square Soft'),
@@ -52,7 +62,8 @@ INSERT INTO developer(developer) VALUES
 ('SEGA'),
 ('NSE Circuit'),
 ('XSEED'),
-('IMCGames');
+('IMCGames'),
+('GOOIWEGDEVELOPER');
 
 INSERT INTO game_genre(game_ID, genre_ID) VALUES
 (1, 2),
@@ -63,7 +74,13 @@ INSERT INTO game_genre(game_ID, genre_ID) VALUES
 (4, 2),
 (5, 3),
 (6, 1),
-(6, 2);
+(6, 2),
+(7, 6);
+
+INSERT INTO account(email, pass, role) VALUES
+('koppers@dialogic.nl', '$2y$10$JS.7ZRdl0yVa.XGrAeSQteGlQJ2CtFUTlBqc5Lc2jNglonY7CWIHq', 'medewerker'),
+('test@test.nl', '$2y$10$CRdW3bYDTDThQ33RXdDLuuOngvy5P/ruDCtYUzT1sGRnXJWlxFF6C', 'editor'),
+('dunn0_0@hotmail.com', '$2y$10$YNmkFF1RM./CrBCWh8A4.eGjerwEH4Egr99BlqbsQNqaklbf8sOJ2', 'admin');
 
 -- voer uit in de tabel die foreign key heeft.
 -- Add contraint add een naam aan de relation
@@ -78,7 +95,7 @@ FOREIGN KEY (genre_ID) REFERENCES genre(genre_ID) ON UPDATE CASCADE ON DELETE CA
 
 ALTER TABLE game
 ADD CONSTRAINT developer_game
-FOREIGN KEY (developer_ID) REFERENCES developer(developer_ID) ON UPDATE CASCADE ON DELETE CASCADE;
+FOREIGN KEY (developer_ID) REFERENCES developer(developer_ID) ON UPDATE CASCADE ON DELETE SET NULL;
 
 
 
